@@ -97,6 +97,14 @@ CREATE TABLE public."CollectionItems" (
     collection_id uuid NOT NULL,
     track_id integer NOT NULL
 );
+CREATE TABLE "_timescaledb_catalog.chunk_constraint_name" (
+  id SERIAL PRIMARY KEY
+);
+
+CREATE SEQUENCE "_timescaledb_catalog.chunk_id_seq";
+
+
+CREATE SEQUENCE "_timescaledb_catalog.dimension_id_seq";
 
 
 ALTER TABLE public."CollectionItems" OWNER TO postgres;
